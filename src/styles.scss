@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  background-color:rgb(0, 24, 84);
+  background-image: url('https://images.unsplash.com/photo-1576767969134-4318b9bd84a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80');
+  background-image: url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+  // background-image: url('https://images.unsplash.com/photo-1558470598-a5dda9640f68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80');
+ background-repeat:no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(30px);
+  // background-color: rgb(86, 100, 207);
+  // background-image: linear-gradient(rgb(3, 53, 103), rgb(86, 100, 207));
+
+}
+
+html, body { height: 100%;
+overflow: hidden; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

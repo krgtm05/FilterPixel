@@ -1,0 +1,49 @@
+<div class="navbar">
+  <div class="container">
+    <div class="nav-tab">
+      <img
+        src="https://play-lh.googleusercontent.com/yPtnkXQAn6yEahOurxuYZL576FDXWn3CqewVcEWJsXlega_nSiavBvmaXwfTGktGlQ"
+        alt="FilterPixel Logo"
+      />
+      <h3>FilterPixel</h3>
+    </div>
+    <div class="nav-tab">
+      <button routerLink="/register">Sign Up</button>
+    </div>
+  </div>
+</div>
+<div class="container2">
+  <div class="login">
+    <button (click)="signInWithGoogle()">
+      <img
+        src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+        alt=""
+      />
+      login with Google
+    </button>
+    <div class="seperation">
+      <h5>OR</h5>
+    </div>
+    <form>
+      <input
+        type="text"
+        name="username"
+        id=""
+        placeholder="Username"
+        [(ngModel)]="email"
+      /><br />
+      <input
+        type="text"
+        name="password"
+        placeholder="Password"
+        [(ngModel)]="password"
+      />
+      <br />
+      <div class="sub">
+        <button type="button" (click)="login()" class="submit-btn">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

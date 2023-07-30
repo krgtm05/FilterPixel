@@ -1,0 +1,79 @@
+
+<div class="navbar">
+  <div class="container ">
+    <div class="nav-tab">
+      <img src="https://play-lh.googleusercontent.com/yPtnkXQAn6yEahOurxuYZL576FDXWn3CqewVcEWJsXlega_nSiavBvmaXwfTGktGlQ"  alt="FilterPixel Logo">
+      <h3>FilterPixel</h3>
+    </div>
+    <div class="nav-tab">
+      <button *ngIf="user; else elseBlock"  (click)="openDialog('0ms', '0ms')" style="background-color: white; color: rgb(0, 0, 70);width: fit-content;">
+       Hi, {{user|emailToUsername}}
+      </button>
+      <ng-template #elseBlock>
+        <!-- This content will be shown if the 'condition' is false -->
+        <button style="background-color: white; color: rgb(0, 0, 70);width: fit-content;">
+          Please login
+         </button>
+      </ng-template>
+    </div>
+  </div>
+
+</div>
+<div class="searchbar">
+  <div class="search-sub">
+    <i class="fa fa-search"></i>
+    <input type="text" placeholder="Search images or videos..." [(ngModel)]="search">
+  </div>
+  <div class="search-sub">
+    <mat-form-field>
+      <mat-label>Select</mat-label>
+      <mat-select >
+        <mat-option (click)="select(20)" value="20">20</mat-option>
+        <mat-option (click)="select(50)" value="50">50</mat-option>
+        <mat-option (click)="select(100)" value="100">100</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button (click)="searchPhotos()" mat-raised-button>Show Result</button>
+  </div>
+
+</div>
+<div class="hidden">
+  <mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select >
+      <mat-option (click)="select(20)" value="20">20</mat-option>
+      <mat-option (click)="select(50)" value="50">50</mat-option>
+      <mat-option (click)="select(100)" value="100">100</mat-option>
+    </mat-select>
+
+  </mat-form-field>
+  <button (click)="searchPhotos()" mat-flat-button color="accent">Show Result</button>
+
+</div>
+<div class="container">
+  <mat-tab-group>
+    <mat-tab label="Image Gallery">
+      <h3 *ngIf="!temp" style="color: black;">Search images or videos to display here...</h3>
+
+      <ul *ngFor="let img of image">
+        <p>{{img.photographer}}</p>
+        <img [src]="img.src.medium" alt="photos">
+      </ul>
+    </mat-tab>
+    <mat-tab label="Landscape">
+      <h3 *ngIf="!temp" style="color: black;">Search images or videos to display here...</h3>
+      <ul *ngFor="let img of image">
+        <p>{{img.photographer}}</p>
+        <img [src]="img.src.landscape" alt="photos">
+      </ul>
+
+   </mat-tab>
+  </mat-tab-group>
+</div>
+
+<div class="container footer">
+  <a href="https://github.com/krgtm05">
+    <h3> <i class="fa fa-github"></i> <br> Gautam Kumar</h3>
+
+  </a>
+</div>
